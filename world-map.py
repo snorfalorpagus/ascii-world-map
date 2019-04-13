@@ -7,7 +7,7 @@ import pyproj
 import rtree
 
 # read the data into a list of shapely geometries
-with open("world-countries.json") as f:
+with open("data/world-countries.json") as f:
     data = json.load(f)
 geoms = [shape(feature["geometry"]) for feature in data["features"]]
 
